@@ -9,7 +9,7 @@ numpy==1.19.5
 psycopg2==2.8.6
 pytz==2020.5
 scikit-learn==0.24.0
-scipy==1.6.0
+scipy==1.5.4
 sqlparse==0.4.1
 threadpoolctl==2.1.0
 whitenoise==5.2.0
