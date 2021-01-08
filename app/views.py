@@ -1,13 +1,15 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .forms import DataForm
+import os
 
 import pickle
 import numpy as np 
 
 #Loading the model
-filename = 'C:\\Users\\Paresham Tewari\\Desktop\\price_predictor\\app\\automobile-price-prediction-DTRegressor-model.pkl'
-regressor = pickle.load(open(filename, 'rb'))
+CURRENT_DIR = os.path.dirname(__file__)
+model_file = os.path.join(CURRENT_DIR, 'automobile-price-prediction-DTRegressor-model.pkl')
+regressor = pickle.load(open(model_file, 'rb'))
 
 def data(request):
 
